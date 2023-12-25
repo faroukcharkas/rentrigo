@@ -2,26 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+root {
+  font-size: 17px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h1, .text-headline1 {
+  font-size: 6em;
+  letter-spacing: -1.5px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h2, .text-headline2 {
+  font-size: 3.764705882352941em;
+  letter-spacing: -0.5px;
+}
+
+h3, .text-headline3 {
+  font-size: 3em;
+  letter-spacing: 0px;
+}
+
+h4, .text-headline4 {
+  font-size: 2.1176470588235294em;
+  letter-spacing: 0.25px;
+}
+
+h5, .text-headline5 {
+  font-size: 1.4705882352941178em;
+  letter-spacing: 0px;
+}
+
+h6, .text-headline6 {
+  font-size: 1.2352941176470589em;
+  letter-spacing: 0.15px;
+}
+
+.text-subtitle1 {
+  font-size: 1em;
+  letter-spacing: 0.15px;
+}
+
+.text-subtitle2 {
+  font-size: 0.8823529411764706em;
+  letter-spacing: 0.1px;
+}
+
+p, .text-body1 {
+  font-size: 1em;
+}
+
+.text-body2 {
+  font-size: 0.8823529411764706em;
+  letter-spacing: 0.25px;
+}
+
+.text-button {
+  font-size: 0.8823529411764706em;
+  letter-spacing: 1.25px;
+}
+
+.text-caption {
+  font-size: 0.7647058823529411em;
+  letter-spacing: 0.4px;
 }
