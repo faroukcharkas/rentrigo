@@ -30,6 +30,7 @@ const config: Config = {
         'orange': '#ee7600',
       },
       spacing: {
+          "0.5": "4px",
           "1": "8px",
           "2": "16px",
           "3": "24px",
