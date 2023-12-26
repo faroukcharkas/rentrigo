@@ -11,7 +11,7 @@ export default function Home() {
         <Header />
         <div className="w-full flex p-8 justify-around text-white">
           <div className="max-w-[64%]">
-            <h1 className="mb-9 font-bold text-center">
+            <h1 className="mb-9 font-bold text-center md:text-headline2 sm:text-headline3">
               {"Own more with each rent payment"}
             </h1>
             <h3 className="text-center">
@@ -21,8 +21,12 @@ export default function Home() {
         </div>
         <div className="w-full bg-paper rounded-[48px] h-[300px] relative">
           <div className="w-full h-8 absolute -top-4 flex justify-around">
-            <div className="max-w-[48%] w-full h-8 shadow-card rounded-[16px] flex ">
-              <TextField inputLayoutType={InputLayoutType.Leading} flex />
+            <div className="max-w-[40%] w-full h-8 shadow-card rounded-[16px] flex ">
+              <TextField
+                inputLayoutType={InputLayoutType.Leading}
+                flex
+                placeholder="Enter a ZIP code..."
+              />
               <SelectField
                 inputLayoutType={InputLayoutType.Middle}
                 options={[

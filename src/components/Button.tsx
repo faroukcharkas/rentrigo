@@ -1,6 +1,13 @@
 "use client";
 import { InputLayoutType } from "@/globals";
 
+const inputLayoutClassNames = {
+  [InputLayoutType.Leading]: "rounded-l-[16px] border-r-0",
+  [InputLayoutType.Trailing]: "rounded-r-[16px] border-l-[1px] border-gray",
+  [InputLayoutType.Standalone]: "rounded-[16px]",
+  [InputLayoutType.Middle]: "border-r-0",
+};
+
 export default function Button({
   inputLayoutType,
   label,
@@ -12,27 +19,9 @@ export default function Button({
   color: string;
   flex?: boolean;
 }) {
-  var classNames: string =
-    "border-[1px] border-green text-white text-button text-body1 max-w-25 bg-" +
-    color;
-  switch (inputLayoutType) {
-    case InputLayoutType.Leading:
-      classNames += " rounded-l-[16px] border-r-0 ";
-      break;
-    case InputLayoutType.Trailing:
-      classNames += " rounded-r-[16px] ";
-      break;
-    case InputLayoutType.Standalone:
-      classNames += " rounded-[16px] ";
-      break;
-    case InputLayoutType.Middle:
-      classNames += " border-r-0 ";
-      break;
-    default:
-      break;
-  }
-  if (flex == true) {
-    classNames += " flex-1 ";
-  }
+  const flexClass = flex ? "flex-1" : "";
+  const layoutClass = inputLayoutClassNames[inputLayoutType] ?? "";
+  const classNames = `bg-${color} text-white text-button text-body1 max-w-25 ${layoutClass} ${flexClass}`;
+
   return <button className={classNames}>{label}</button>;
 }
