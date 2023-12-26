@@ -10,6 +10,7 @@ root {
 h1, .text-headline1 {
   font-size: 6em;
   letter-spacing: -1.5px;
+  line-height: 1em;
 }
 
 h2, .text-headline2 {
@@ -57,11 +58,30 @@ p, .text-body1 {
 }
 
 .text-button {
-  font-size: 0.8823529411764706em;
-  letter-spacing: 1.25px;
+  font-size: 1em;
 }
 
 .text-caption {
   font-size: 0.7647058823529411em;
   letter-spacing: 0.4px;
+}
+
+.shadow-field-default {
+  box-shadow: inset 0px 2px 16px 0px rgba(0,0,0,0.25);
+}
+
+.shadow-field-default:focus {
+  box-shadow: inset 0px 2px 16px 0px rgba(78,183,249,0.65);
+}
+
+.shadow-button-default {
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.25);
+}
+
+.shadow-button-pressed {
+  box-shadow: inset 0px 4px 8px 0px rgba(0,0,0,0.25);
+}
+
+.shadow-card {
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.25);
 }
