@@ -36,8 +36,8 @@ export default function SelectField({
   return (
     <div>
       <select className={classNames} defaultValue={defaultValue}>
-        {options.map((item, _) => (
-          <option>{item}</option>
+        {options.map((item, key) => (
+          <option key={key}>{item}</option>
         ))}
       </select>
     </div>
